@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_connections"
+            android:icon="@drawable/connections"
+            android:title="Connections" />
+        <item
+            android:id="@+id/nav_groups"
+            android:icon="@drawable/groups"
+            android:title="Groups" />
+        <item
+            android:id="@+id/nav_preferences"
+            android:icon="@drawable/preferences"
+            android:title="Preferences" />
+        <item
+            android:id="@+id/nav_news_feed"
+            android:icon="@drawable/quantum_ic_art_track_grey600_48"
+            android:title="News Feed"/>
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Tools" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/help"
+                android:title="Help" />
+        </menu>
+    </item>
+
+</menu>

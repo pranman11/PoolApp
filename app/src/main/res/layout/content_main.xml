@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myapp.pranavmanglani.mapsdemo.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:padding="0dp">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        tools:context="com.myapp.pranavmanglani.mapsdemo.MapsActivity"
+        android:layout_above="@+id/horizontalScrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/horizontalScrollView"
+        android:background="@drawable/abc_list_pressed_holo_light"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp">
+                <ImageButton
+                    android:id="@+id/carImgBtn"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/car"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/radiobutton_off_background" />
+
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="15dp"
+                    android:text="Car"
+                    android:textAlignment="center"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp">
+                <ImageButton
+                    android:id="@+id/taxiImgBtn"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/taxi"
+                    android:background="@android:drawable/radiobutton_off_background"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="15dp"
+                    android:text="Taxi"
+                    android:textAlignment="center"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp">
+                <ImageButton
+                    android:id="@+id/busImgBtn"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/bus"
+                    android:background="@android:drawable/radiobutton_off_background"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="15dp"
+                    android:text="Bus"
+                    android:textAlignment="center"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp">
+                <ImageButton
+                    android:id="@+id/trainImgBtn"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/train"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/radiobutton_off_background"
+                    android:padding="13dp" />
+
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="15dp"
+                    android:text="Train"
+                    android:textAlignment="center"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp" />
+            </FrameLayout>
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_margin="5dp">-->
+                <!--<ImageButton-->
+                    <!--android:id="@+id/rickImgBtn"-->
+                    <!--android:layout_width="65dp"-->
+                    <!--android:layout_height="65dp"-->
+                    <!--android:src="@drawable/rick"-->
+                    <!--android:background="@android:drawable/radiobutton_off_background"-->
+                    <!--android:scaleType="fitCenter"-->
+                    <!--android:adjustViewBounds="true"-->
+                    <!--android:padding="13dp" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="65dp"-->
+                    <!--android:layout_height="15dp"-->
+                    <!--android:text="Rick"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:layout_gravity="center|bottom"-->
+                    <!--android:layout_marginTop="5dp" />-->
+            <!--</FrameLayout>-->
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_margin="5dp">-->
+                <!--<ImageButton-->
+                    <!--android:id="@+id/bikeImgBtn"-->
+                    <!--android:layout_width="65dp"-->
+                    <!--android:layout_height="65dp"-->
+                    <!--android:src="@drawable/bike"-->
+                    <!--android:background="@android:drawable/radiobutton_off_background"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--android:adjustViewBounds="true" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="65dp"-->
+                    <!--android:layout_height="15dp"-->
+                    <!--android:text="Bike"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:layout_gravity="center|bottom"-->
+                    <!--android:layout_marginTop="5dp" />-->
+            <!--</FrameLayout>-->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/favouritesButton"
+        android:layout_above="@+id/horizontalScrollView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/favorites"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/favourites"
+        android:orientation="vertical"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_alignEnd="@+id/favouritesButton"
+        android:layout_above="@+id/favouritesButton">
+
+        <LinearLayout
+            android:id="@+id/favourite1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favourite_1"
+                android:background="@drawable/abc_ab_share_pack_mtrl_alpha"
+                android:layout_marginLeft="50dp" />
+
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/favourite2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favourite_2"
+                android:background="@drawable/abc_ab_share_pack_mtrl_alpha"
+                android:layout_marginLeft="50dp" />
+
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/favourite3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favourite_3"
+                android:background="@drawable/abc_ab_share_pack_mtrl_alpha"
+                android:layout_marginLeft="50dp" />
+
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/destination"
+        android:hint=" Destination:"
+        android:background="@drawable/abc_popup_background_mtrl_mult"
+        android:layout_alignTop="@+id/favourites"
+        android:layout_alignEnd="@+id/favourites"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/source"
+        android:background="@drawable/abc_popup_background_mtrl_mult"
+        android:layout_above="@+id/favourites"
+        android:layout_alignStart="@+id/destination"
+        android:hint=" Source:"
+        android:layout_alignEnd="@+id/favourites" />
+
+    <FrameLayout
+        android:background="@drawable/cast_mini_controller_gradient_light"
+        android:id="@+id/carFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/map"
+        android:visibility="visible"
+        android:layout_alignParentEnd="false"
+        android:alpha="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Take a lift"
+            android:id="@+id/tvTakeLift"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Give a Lift"
+            android:id="@+id/tvGiveLift"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="20dp"
+            android:textColor="#000000" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchLift"
+            android:layout_gravity="center_horizontal|top"
+            android:checked="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GO"
+            android:id="@+id/btnGo"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/abc_color_highlight_material" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Petrol Consumption: --/-- L"
+            android:id="@+id/tvPetrol"
+            android:layout_gravity="left|bottom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Approx. Amount: --/-- INR"
+            android:id="@+id/tvAmt"
+            android:layout_gravity="right|bottom" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/taxiFrame"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/map"
+        android:background="@drawable/cast_mini_controller_gradient_light"
+        android:alpha="0">
+
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UBER"
+                android:id="@+id/btnUber"
+                android:layout_gravity="center_horizontal|top"
+                android:backgroundTint="@color/abc_background_cache_hint_selector_material_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Min. Fare: --/--"
+                android:id="@+id/tvUber"
+                android:layout_gravity="center"
+                android:textColor="@color/abc_background_cache_hint_selector_material_dark"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="(exc. offers)"
+                android:id="@+id/offersUber"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ola"
+                android:id="@+id/btnOla"
+                android:layout_gravity="center_horizontal|top"
+                android:backgroundTint="#f9ed07" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Min. Fare: --/--"
+                android:id="@+id/tvOla"
+                android:layout_gravity="center"
+                android:textColor="@color/abc_background_cache_hint_selector_material_dark"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="(exc. offers)"
+                android:id="@+id/offersOla"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kaali Peeli"
+                android:id="@+id/btnKaaliPeeli"
+                android:layout_gravity="center_horizontal|top"
+                android:backgroundTint="@color/abc_color_highlight_material" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Min. Fare: --/--"
+                android:id="@+id/tvKaaliPeeli"
+                android:layout_gravity="center"
+                android:textColor="@color/abc_background_cache_hint_selector_material_dark"
+                android:layout_marginTop="20dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/busFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/map"
+        android:background="@drawable/cast_mini_controller_gradient_light"
+        android:alpha="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Source stop:"
+            android:id="@+id/tvSrcStop"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Destination Stop:"
+            android:id="@+id/tvDestStop"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="-"
+            android:id="@+id/textView7"
+            android:layout_gravity="center_horizontal|top" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="-"
+            android:id="@+id/textView8"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=" Bus numbers:"
+            android:id="@+id/tvBusNo"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1,2,3,4,5"
+            android:id="@+id/tvNumbers"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy Ticket"
+            android:id="@+id/btnBuyTicket"
+            android:layout_gravity="right|bottom"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Distance to be walked: ___ km"
+            android:id="@+id/tvDistance"
+            android:layout_gravity="right|top" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/trainFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/map"
+        android:background="@drawable/cast_mini_controller_gradient_light"
+        android:alpha="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Source station:"
+            android:id="@+id/tvSrcStation"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Destination Station:"
+            android:id="@+id/tvDestStation"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="-"
+            android:id="@+id/tvSrcSn"
+            android:layout_gravity="center_horizontal|top" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="-"
+            android:id="@+id/tvDestSn"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=" Train Timings:"
+            android:id="@+id/tvNo"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1:00(F),1:15(S)"
+            android:id="@+id/tvTimings"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy Ticket"
+            android:id="@+id/btnBuyTrainTicket"
+            android:layout_gravity="right|bottom"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Station is ___ km away"
+            android:id="@+id/tvDistanceSn"
+            android:layout_gravity="right|top" />
+
+    </FrameLayout>
+
+</RelativeLayout>
